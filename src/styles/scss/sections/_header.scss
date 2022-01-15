@@ -1,0 +1,64 @@
+.header{
+    background: $white;
+    padding: 56px 0 0 0;
+    &__container{
+        display: grid;
+        grid-template-areas: 'menu feedback';
+    }
+    &__menu{
+        grid-area: menu;
+        &-list{
+            display: flex;
+            font-family: Inter;
+            font-weight: 700;
+            font-size: .8125rem;
+            line-height: .9831rem;
+            color: $sonicSilver;
+            &-item{
+                display: flex;
+                align-items: center;
+                &-link{
+
+                }
+                &-arrow{
+                    margin: 0 0 0 10px;
+                }
+                &:not(:last-child){
+                    margin: 0 43px 0 0;
+                }
+                &:hover{
+                    color: $black;
+                    path{
+                        stroke: $black;
+                    }
+                }
+            }
+        }
+    }
+    &__feedback{
+        display: grid;
+        grid-template-areas:    'phone social-network'
+                                'address social-network';
+        font-family: Roboto;
+        color: $darkSilver;
+        grid-area: feedback;
+        &-phone{
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.465rem;
+            grid-area: phone;
+            margin-bottom: 20px;
+        }
+        &-address{
+            font-weight: 300;
+            font-size: .875rem;
+            line-height: 1.0256rem;
+            grid-area: address;
+        }
+        &-social-network{
+            display: flex;
+            align-items: center;
+            grid-area: social-network;
+        }
+    }
+}

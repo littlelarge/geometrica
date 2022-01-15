@@ -1,0 +1,50 @@
+@import './base/variables';
+@import './base/reset';
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    min-width: 320px;
+}
+
+body {
+    height: 600px;
+    background: gray;
+}
+
+@import './sections/header';
+@import './media';
