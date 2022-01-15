@@ -1,9 +1,21 @@
 .header{
     background: $white;
     padding: 56px 0 0 0;
+    height: 160px;
     &__container{
+        position: relative;
+    }
+    &__content{
         display: grid;
-        grid-template-areas: 'menu feedback';
+        grid-template-areas:    'menu menu feedback'
+                                'logo profile search'
+                                'catalog catalog search';
+        position: absolute;
+        background: $white;
+        right: 0;
+        top: 0;
+        width: 1362px;
+        padding-left: 80px;
     }
     &__menu{
         grid-area: menu;
@@ -57,8 +69,90 @@
         }
         &-social-network{
             display: flex;
+            justify-content: center;
             align-items: center;
             grid-area: social-network;
+        }
+    }
+    &__logo{
+        grid-area: logo;
+        display: flex;
+        font-family: Roboto;
+        padding-top: 10px;
+        &-descr{
+            font-weight: 400;
+            font-size: .75rem;
+            line-height: 1.125rem;
+            letter-spacing: 2.4px;
+            color: $silverFoil;
+            width: 205px;
+            margin-left: 54px;
+        }
+    }
+    &__profile{
+        display: flex;
+        grid-area: profile;
+        &-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 54px;
+            height: 54px;
+            position: relative;
+            &:not(:last-child){
+                margin-right: 50px;
+            }
+        }
+        &-count{
+            font-family: Roboto;
+            font-weight: 400;
+            font-size: .6875rem;
+            line-height: .8056rem;
+            color: $silverSand;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &-basket-count{
+            color: $red;
+        }
+    }
+    &__search{
+        display: flex;
+        align-items: center;
+        grid-area: search;
+        transform: translateY(7%);
+        &-input{
+            font-family: Inter;
+            background: $chineseWhite;
+            padding: 18px;
+            color: $darkSilver;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.3rem;
+            width: 312px;
+        }
+        &-button{
+            height: 56.8px;
+            background-color: $chineseWhite;
+            padding: 0 20px;
+        }
+    }
+    &__catalog{
+        transform: translateY(75%);
+        grid-area: catalog;
+        &-button{
+            display: flex;
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.21rem;
+            color: $white;
+            padding: 26px 34px;
+            background: $permanentGeraniumLake;
+            &-burger-svg{
+                margin-left: 28px;
+            }
         }
     }
 }
