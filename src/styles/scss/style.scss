@@ -38,7 +38,7 @@ input:focus, textarea:focus, select:focus{
 .container {
     margin: 0 auto;
     padding: 0 34px;
-    max-width: 1246px;
+    max-width: 1348px;
     min-width: 320px;
 }
 
@@ -49,4 +49,5 @@ body {
 
 @import './sections/header';
 @import './sections/hero';
+@import './sections/catalog';
 @import './media';
