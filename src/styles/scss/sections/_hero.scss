@@ -1,0 +1,112 @@
+.hero{
+    position: relative;
+    .hero__fade-carousel-indicators .active {
+        background-color: $permanentGeraniumLake;
+    }
+    &__container{
+        height: 100%;
+        position: relative;
+    }
+    &__fade-carousel{
+        position: relative;
+        height: 800px;
+        &-inner{
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        &-filter-img{
+            position: absolute;
+            z-index: 2;
+        }
+    }
+    &__fade-carousel-dots{
+        position: absolute;
+        z-index: 2;
+        bottom: 117px;
+    }
+    &__fade-carousel-indicators{
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0 0 0 15px;
+        bottom: 157px;
+        [data-bs-target]{
+            margin: 0;
+            border: none;
+            width: 40px;
+            height: 6px;
+            &:not(:last-child){
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+    &__fade-carousel-item{
+        padding: 428px 0 0 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .2s ease-in-out;
+        &-inner{
+            display: flex;
+
+        }
+        &-title-descr{
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.21rem;
+            letter-spacing: 4.8px;
+            text-transform: uppercase;
+            color: $whiteChocolate;
+        }
+        &-title{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 6.25rem;
+            line-height: 7.5637rem;
+            letter-spacing: -8px;
+            text-transform: uppercase;
+            color: $white;
+            margin: 0 34px 0 -4px;
+            opacity: 0.8;
+            span{
+                margin: 0 0 19px 0;
+            }
+        }
+        &-link{
+            display: flex;
+            align-items: flex-end;
+            font-weight: 400;
+            font-size: 1.625rem;
+            line-height: 1.9669rem;
+            letter-spacing: 0;
+            opacity: 0.8;
+            color: $white;
+            text-transform: uppercase;
+            padding: 0 0 19px 0;
+            span{
+                display: flex;
+                align-items: center;
+                margin: 0 23px 0 0;
+            }
+            a{
+                display: flex;
+                align-items: center;
+                margin: 0 0 2px 0;
+            }
+        }
+        &-01{
+            background: url("/src/img/hero/hero__img-01.jpg") center / cover no-repeat;
+        }
+        &-02{
+            background: url("/src/img/hero/hero__img-02.jpg") center / cover no-repeat;
+        }
+        &-03{
+            background: url("/src/img/hero/hero__img-03.jpg") center / cover no-repeat;
+        }
+    }
+}

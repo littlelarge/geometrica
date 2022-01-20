@@ -1,1 +1,1 @@
-# hosting https://littlelarge.github.io/geometrica
+# hosting: https://littlelarge.github.io/sushi

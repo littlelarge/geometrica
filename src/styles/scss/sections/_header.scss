@@ -1,21 +1,24 @@
 .header{
     background: $white;
     padding: 56px 0 0 0;
-    height: 160px;
     &__container{
         position: relative;
     }
     &__content{
         display: grid;
         grid-template-areas:    'menu menu feedback'
-                                'logo profile search'
-                                'catalog catalog search';
-        position: absolute;
+                                'logo profile profile';
+                                // 'catalog catalog search'
         background: $white;
+    }
+    &__bottom-content{
+        position: absolute;
+        width: 106.25%;
         right: 0;
-        top: 0;
-        width: 1362px;
-        padding-left: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        z-index: 10;
     }
     &__menu{
         grid-area: menu;
@@ -29,9 +32,6 @@
             &-item{
                 display: flex;
                 align-items: center;
-                &-link{
-
-                }
                 &-arrow{
                     margin: 0 0 0 10px;
                 }
@@ -55,11 +55,16 @@
         color: $darkSilver;
         grid-area: feedback;
         &-phone{
+            display: flex;
+            align-items: center;
             font-weight: 400;
             font-size: 1.25rem;
             line-height: 1.465rem;
             grid-area: phone;
             margin-bottom: 20px;
+            &-link{
+                margin-left: 9.92px;
+            }
         }
         &-address{
             font-weight: 300;
@@ -77,8 +82,8 @@
     &__logo{
         grid-area: logo;
         display: flex;
+        align-items: flex-end;
         font-family: Roboto;
-        padding-top: 10px;
         &-descr{
             font-weight: 400;
             font-size: .75rem;
@@ -91,7 +96,9 @@
     }
     &__profile{
         display: flex;
+        align-items: flex-end;
         grid-area: profile;
+        column-gap: 30px;
         &-item{
             display: flex;
             justify-content: center;
@@ -99,9 +106,6 @@
             width: 54px;
             height: 54px;
             position: relative;
-            &:not(:last-child){
-                margin-right: 50px;
-            }
         }
         &-count{
             font-family: Roboto;
@@ -117,30 +121,14 @@
             color: $red;
         }
     }
-    &__search{
-        display: flex;
-        align-items: center;
-        grid-area: search;
-        transform: translateY(7%);
-        &-input{
-            font-family: Inter;
-            background: $chineseWhite;
-            padding: 18px;
-            color: $darkSilver;
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.3rem;
-            width: 312px;
-        }
-        &-button{
-            height: 56.8px;
-            background-color: $chineseWhite;
-            padding: 0 20px;
-        }
-    }
     &__catalog{
-        transform: translateY(75%);
+        display: flex;
+        align-items: flex-end;
         grid-area: catalog;
+        background: $white;
+        align-self: stretch;
+        flex-grow: 1;
+        padding-left: 7%;
         &-button{
             display: flex;
             font-family: Inter;
@@ -150,8 +138,39 @@
             color: $white;
             padding: 26px 34px;
             background: $permanentGeraniumLake;
+            transform: translateY(71.43%);
             &-burger-svg{
                 margin-left: 28px;
+            }
+        }
+    }
+    &__search{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        grid-area: search;
+        &-inner{
+            display: flex;
+            align-items: center;
+            border: 20px solid $white;
+            border-top: none;
+            border-left: none;
+            &-input{
+                font-family: Inter;
+                background: $chineseWhite;
+                padding: 18px;
+                color: $darkSilver;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.3rem;
+                width: 312px;
+                opacity: 0.9;
+            }
+            &-button{
+                height: 56.8px;
+                background-color: $chineseWhite;
+                padding: 0 20px;
+                opacity: 0.9;
             }
         }
     }

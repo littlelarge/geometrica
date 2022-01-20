@@ -37,14 +37,16 @@ input:focus, textarea:focus, select:focus{
 
 .container {
     margin: 0 auto;
-    max-width: 1280px;
+    padding: 0 34px;
+    max-width: 1246px;
     min-width: 320px;
 }
 
 body {
-    height: 600px;
     background: gray;
+    height: 1000px;
 }
 
 @import './sections/header';
+@import './sections/hero';
 @import './media';
